@@ -9,6 +9,7 @@ import pytest
 @pytest.fixture
 def driver():
     test_site = "https://www.saucedemo.com/"
+    a = 0
     driver = webdriver.Chrome()
     sleep(5)
     driver.get(test_site)

@@ -37,7 +37,8 @@ def test_delete_from_cart(add_product_to_cart):
     #Проверка, что количество поменялось на 1
     icon_cart = driver.find_element(By.CLASS_NAME, "shopping_cart_badge")
     assert icon_cart.text == "1"
-
+    
+    #Удаление второго товара и проверка, что количество поменялось на 0
     delete_btn2 = driver.find_element(By.ID, "remove-sauce-labs-bolt-t-shirt")
     delete_btn2.click()
     icon_cart = driver.find_element(By.ID, "shopping_cart_container")
